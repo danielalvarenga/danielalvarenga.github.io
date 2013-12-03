@@ -1,0 +1,27 @@
+---
+layout: layout
+---
+
+<a href="/" class="back">Back</a>
+
+<div class="post-title">
+  <h2>{{ page.title }}</h2>
+</div>
+
+<div class="post-content">
+  {{ content }}
+</div>
+
+<ul class="pager">
+{% if page.previous %}
+  <li>
+  <a href="{{ page.previous.url }}" title="{{ page.previous.title }}" class="pull-left"><<</a>
+  </li>
+{% endif %}
+
+{% if page.next %}
+  <li>
+  <a href="{{ page.next.url }}" title="{{ page.next.title }}" class="pull-right">>></a>
+  </li>
+{% endif %}
+</ul>
